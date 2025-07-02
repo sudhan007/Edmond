@@ -1,17 +1,8 @@
-/**
-* Template Name: Consulting
-* Template URL: https://bootstrapmade.com/bootstrap-consulting-website-template/
-* Updated: May 01 2025 with Bootstrap v5.3.5
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-(function() {
+(function () {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
+
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
@@ -22,9 +13,7 @@
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
-  /**
-   * Mobile nav toggle
-   */
+
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
   function mobileNavToogle() {
@@ -36,9 +25,7 @@
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
   }
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
+
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
@@ -48,11 +35,9 @@
 
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
+
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -60,9 +45,7 @@
     });
   });
 
-  /**
-   * Preloader
-   */
+
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
@@ -70,9 +53,6 @@
     });
   }
 
-  /**
-   * Scroll top button
-   */
   let scrollTop = document.querySelector('.scroll-top');
 
   function toggleScrollTop() {
@@ -91,9 +71,7 @@
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 
-  /**
-   * Animation on scroll function and init
-   */
+
   function aosInit() {
     AOS.init({
       duration: 600,
@@ -104,16 +82,12 @@
   }
   window.addEventListener('load', aosInit);
 
-  /**
-   * Initiate Pure Counter
-   */
+
   new PureCounter();
 
-  /**
-   * Init swiper sliders
-   */
+
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -128,18 +102,16 @@
 
   window.addEventListener("load", initSwiper);
 
-  /*
-   * Pricing Toggle
-   */
+
 
   const pricingContainers = document.querySelectorAll('.pricing-toggle-container');
 
-  pricingContainers.forEach(function(container) {
+  pricingContainers.forEach(function (container) {
     const pricingSwitch = container.querySelector('.pricing-toggle input[type="checkbox"]');
     const monthlyText = container.querySelector('.monthly');
     const yearlyText = container.querySelector('.yearly');
 
-    pricingSwitch.addEventListener('change', function() {
+    pricingSwitch.addEventListener('change', function () {
       const pricingItems = container.querySelectorAll('.pricing-item');
 
       if (this.checked) {
@@ -158,19 +130,15 @@
     });
   });
 
-  /**
-   * Frequently Asked Questions Toggle
-   */
+
   document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
     faqItem.addEventListener('click', () => {
       faqItem.parentNode.classList.toggle('faq-active');
     });
   });
 
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  window.addEventListener('load', function(e) {
+
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -185,9 +153,7 @@
     }
   });
 
-  /**
-   * Navmenu Scrollspy
-   */
+
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {

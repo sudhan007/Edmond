@@ -1,24 +1,12 @@
-/**
-* Template Name: Consulting
-* Template URL: https://bootstrapmade.com/bootstrap-consulting-website-template/
-* Updated: May 01 2025 with Bootstrap v5.3.5
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444d4d; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #003a36; /* Color for headings, subheadings and title throughout the website */
@@ -29,7 +17,12 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.7);  /* The default color of the main navmenu links */
+  --nav-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -234,12 +227,12 @@ h6 {
     position: relative;
   }
 
-  .navmenu>ul>li {
+  .navmenu > ul > li {
     white-space: nowrap;
     padding: 15px 14px;
   }
 
-  .navmenu>ul>li:last-child {
+  .navmenu > ul > li:last-child {
     padding-right: 0;
   }
 
@@ -266,7 +259,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu>ul>li>a:before {
+  .navmenu > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -280,13 +273,13 @@ h6 {
   }
 
   .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
+  .navmenu li:hover > a:before,
   .navmenu .active:before {
     visibility: visible;
     width: 100%;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -325,11 +318,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -341,7 +334,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -443,7 +436,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -470,7 +463,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -524,7 +517,8 @@ h6 {
 
 .footer .copyright {
   padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -624,7 +618,8 @@ h6 {
 
 .page-title .heading {
   padding: 120px 0 80px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .page-title .heading h1 {
@@ -646,11 +641,11 @@ h6 {
   font-weight: 600;
 }
 
-.page-title nav ol li+li {
+.page-title nav ol li + li {
   padding-left: 10px;
 }
 
-.page-title nav ol li+li::before {
+.page-title nav ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -670,7 +665,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 73px;
@@ -1312,7 +1306,11 @@ section,
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(to right, var(--accent-color), color-mix(in srgb, var(--accent-color), #fff 30%));
+  background: linear-gradient(
+    to right,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #fff 30%)
+  );
 }
 
 @media (max-width: 992px) {
@@ -1434,7 +1432,7 @@ section,
   background-size: 15px;
 }
 
-.consultation .cta-form button[type=submit] {
+.consultation .cta-form button[type="submit"] {
   background-color: var(--accent-color);
   border: none;
   color: var(--contrast-color);
@@ -1446,7 +1444,7 @@ section,
   width: 100%;
 }
 
-.consultation .cta-form button[type=submit]:hover {
+.consultation .cta-form button[type="submit"]:hover {
   background-color: color-mix(in srgb, var(--accent-color), #000 10%);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -1520,7 +1518,11 @@ section,
   transition: all 0.3s ease;
 }
 
-.why-choose-us .features-content .features-list .feature-item .feature-icon:hover {
+.why-choose-us
+  .features-content
+  .features-list
+  .feature-item
+  .feature-icon:hover {
   background-color: var(--accent-color);
   color: var(--contrast-color);
   transform: translateY(-5px);
@@ -1737,7 +1739,11 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1820,7 +1826,7 @@ section,
 
 .testimonials .testimonial-item .stars {
   margin-bottom: 15px;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .testimonials .testimonial-item .stars i {
@@ -1861,7 +1867,12 @@ section,
   color: var(--heading-color);
 }
 
-.testimonials .testimonial-item .testimonial-footer .testimonial-author div span {
+.testimonials
+  .testimonial-item
+  .testimonial-footer
+  .testimonial-author
+  div
+  span {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
@@ -1891,11 +1902,21 @@ section,
     height: 45px;
   }
 
-  .testimonials .testimonial-item .testimonial-footer .testimonial-author div h5 {
+  .testimonials
+    .testimonial-item
+    .testimonial-footer
+    .testimonial-author
+    div
+    h5 {
     font-size: 16px;
   }
 
-  .testimonials .testimonial-item .testimonial-footer .testimonial-author div span {
+  .testimonials
+    .testimonial-item
+    .testimonial-footer
+    .testimonial-author
+    div
+    span {
     font-size: 13px;
   }
 
@@ -1957,11 +1978,11 @@ section,
   height: 0;
 }
 
-.pricing .pricing-toggle .switch input:checked+.slider {
+.pricing .pricing-toggle .switch input:checked + .slider {
   background-color: var(--accent-color);
 }
 
-.pricing .pricing-toggle .switch input:checked+.slider:before {
+.pricing .pricing-toggle .switch input:checked + .slider:before {
   transform: translateX(30px);
 }
 
@@ -2063,7 +2084,8 @@ section,
 .pricing .pricing-item .pricing-header {
   padding: 30px;
   text-align: center;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .pricing .pricing-item .pricing-header h3 {
@@ -2514,11 +2536,19 @@ section,
   box-shadow: none;
 }
 
-.contact .contact-form-wrapper .php-email-form .form-group .form-control::placeholder {
+.contact
+  .contact-form-wrapper
+  .php-email-form
+  .form-group
+  .form-control::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .contact-form-wrapper .php-email-form .form-group textarea.form-control {
+.contact
+  .contact-form-wrapper
+  .php-email-form
+  .form-group
+  textarea.form-control {
   min-height: 150px;
   resize: vertical;
 }
@@ -2531,12 +2561,20 @@ section,
   margin-top: 0.3em;
 }
 
-.contact .contact-form-wrapper .php-email-form .form-check .form-check-input:checked {
+.contact
+  .contact-form-wrapper
+  .php-email-form
+  .form-check
+  .form-check-input:checked {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.contact .contact-form-wrapper .php-email-form .form-check .form-check-input:focus {
+.contact
+  .contact-form-wrapper
+  .php-email-form
+  .form-check
+  .form-check-input:focus {
   box-shadow: none;
   border-color: color-mix(in srgb, var(--accent-color), transparent 50%);
 }
@@ -2565,7 +2603,6 @@ section,
 }
 
 @media (max-width: 992px) {
-
   .contact .contact-card,
   .contact .newsletter-card,
   .contact .contact-form-wrapper {
@@ -2601,7 +2638,8 @@ section,
   display: block;
   line-height: 1;
   padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  border-left: 3px solid
+    color-mix(in srgb, var(--default-color), transparent 70%);
   margin: 20px 0;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   transition: 0.3s;
